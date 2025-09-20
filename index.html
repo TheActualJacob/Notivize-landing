@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notivize | Turn Your Inbox Into An Intelligent Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">
+                Notivize
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                    <li><a href="#cta" class="nav-button">Request Access</a></li>
+                </ul>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <box-icon name='menu'></box-icon>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>Turn your inbox into an intelligent assistant.</h1>
+                <p>Notivize connects to your inbox to summarize conversations, highlight urgent tasks, and schedule events, giving you back hours of your day.</p>
+                <a href="#cta" class="cta-button">Request Early Access</a>
+                <span class="support-text">Works with Gmail, Outlook coming soon.</span>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Everything you need. Nothing you don't.</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <box-icon name='news' type='solid'></box-icon>
+                        </div>
+                        <h3>Summarize Emails</h3>
+                        <p>Instantly get the key takeaways from long email threads with concise, AI-powered summaries.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <box-icon name='calendar-plus' type='solid'></box-icon>
+                        </div>
+                        <h3>Smart Scheduling</h3>
+                        <p>Notivize detects dates and times, letting you create Google Calendar events with a single click.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <box-icon name='message-rounded-dots' type='solid'></box-icon>
+                        </div>
+                        <h3>Ask Anything</h3>
+                        <p>Query your inbox like a database to find specific files, quotes, or details in seconds.</p>
+                    </div>
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <box-icon name='star' type='solid'></box-icon>
+                        </div>
+                        <h3>Prioritize Tasks</h3>
+                        <p>Automatically identify action items and deadlines to create a clear, prioritized task list.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how-it-works" id="how-it-works">
+            <div class="container">
+                <div class="section-title">
+                    <h2>From Clutter to Clarity in Seconds</h2>
+                </div>
+                <div class="infographic">
+                    <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+                        <path id="path1" class="draw-path" d="M 100 200 H 300" />
+                        <path id="path2" class="draw-path" d="M 500 200 H 700" />
+                        <path id="path3" class="draw-path" d="M 500 200 H 700" />
+
+                        <g id="step1" class="infographic-step">
+                            <circle cx="50" cy="200" r="40" class="node-bg" />
+                            <foreignObject x="25" y="175" width="50" height="50">
+                                <box-icon name='envelope' color="#e2e8f0" size="lg"></box-icon>
+                            </foreignObject>
+                            <text x="50" y="270" text-anchor="middle" class="label">Incoming Email</text>
+                        </g>
+
+                        <g id="step2" class="infographic-step">
+                            <circle cx="400" cy="200" r="60" class="node-bg-main" />
+                            <foreignObject x="365" y="165" width="70" height="70">
+                                <box-icon name='chip' color="#e2e8f0" size="70px"></box-icon>
+                            </foreignObject>
+                            <text x="400" y="290" text-anchor="middle" class="label">Notivize AI Analysis</text>
+                        </g>
+
+                        <g id="step3a" class="infographic-step">
+                            <rect x="650" y="50" width="200" height="100" rx="10" class="node-card"/>
+                            <foreignObject x="665" y="65" width="30" height="30">
+                                <box-icon name='list-ul' color="#e2e8f0"></box-icon>
+                            </foreignObject>
+                            <text x="705" y="85" class="card-title">Summary</text>
+                            <text x="670" y="115" class="card-text">• Meet Friday @ 3PM</text>
+                            <text x="670" y="130" class="card-text">• Review budget.pdf</text>
+                        </g>
+
+                        <g id="step3b" class="infographic-step">
+                            <rect x="650" y="250" width="200" height="100" rx="10" class="node-card"/>
+                             <foreignObject x="665" y="265" width="30" height="30">
+                                <box-icon name='calendar' color="#e2e8f0"></box-icon>
+                            </foreignObject>
+                            <text x="705" y="285" class="card-title">Calendar Event</text>
+                            <text x="670" y="315" class="card-text">• Project Alpha Mtg</text>
+                            <text x="670" y="330" class="card-text">• Friday, 3:00 PM</text>
+                        </g>
+
+                         <path id="path2-mod" class="draw-path" d="M 460 200 C 550 200, 550 100, 650 100" />
+                        <path id="path3-mod" class="draw-path" d="M 460 200 C 550 200, 550 300, 650 300" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta" id="cta">
+            <div class="container">
+                <h2>Stop managing email. Start getting results.</h2>
+                <p>Join the waitlist and be the first to experience Notivize.</p>
+                <form class="cta-form">
+                    <input type="email" placeholder="your.email@example.com" required>
+                    <button type="submit" class="cta-button">Request Early Access</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Notivize, Inc. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><box-icon type='logo' name='twitter' color="#a0aec0"></box-icon></a>
+                <a href="#"><box-icon type='logo' name='linkedin-square' color="#a0aec0"></box-icon></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
