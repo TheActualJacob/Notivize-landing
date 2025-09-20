@@ -218,14 +218,21 @@ header nav {
 .how-it-works {
     padding: 5rem 0;
 }
+
+/* FIXED STYLES */
 .infographic {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
+    padding-right: 2rem;     /* extra breathing room */
+    overflow-x: auto;        /* allow scroll if too wide */
 }
+
 .infographic svg {
-    width: 100%;
+    min-width: 1000px;       /* ensures labels don’t get clipped */
+    width: auto;
     height: auto;
 }
+
 .infographic .label {
     fill: var(--text-color-secondary);
     font-size: 14px;
@@ -394,14 +401,21 @@ footer .container {
     .cta-form {
         flex-direction: column;
     }
+
+    /* Infographic scroll on mobile */
+    .infographic {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .infographic svg {
+        min-width: 700px;
+    }
 }
 
 @media (max-width: 576px) {
     .features-grid {
         grid-template-columns: 1fr;
     }
-    /* Vertical infographic not implemented in this simple version for brevity, 
-       but you would use media queries to change SVG attributes or show a different SVG */
     .infographic .card-title { font-size: 12px; }
     .infographic .card-text { font-size: 10px; }
     .infographic .label { font-size: 12px; }
