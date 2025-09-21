@@ -564,11 +564,16 @@ header.scrolled {
   align-items: center;
   margin: 2rem auto;
   max-width: 600px;
+  padding: 0 1rem;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .cta-form input[type="email"] {
   flex: 1;
-  min-width: 280px;
+  width: 100%;
+  min-width: 200px;
+  max-width: 100%;
   padding: 1rem 1.5rem;
   font-size: 1rem;
   border: 2px solid transparent;
@@ -576,6 +581,7 @@ header.scrolled {
   background: rgba(255, 255, 255, 0.1);
   color: var(--text-light);
   transition: all 0.3s ease;
+  margin: 0;
 }
 .cta-form input[type="email"]:focus {
   outline: none;
@@ -603,6 +609,26 @@ header.scrolled {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: auto;
+  min-width: 200px;
+}
+
+@media (max-width: 640px) {
+  .cta-form {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cta-form input[type="email"],
+  .submit-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cta h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    padding: 0 1rem;
+  }
 }
 
 .submit-button::after {
