@@ -131,7 +131,6 @@ header.scrolled {
 
 /* HERO */
 .hero {
-  overflow: visible;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -332,6 +331,7 @@ header.scrolled {
 }
 
 .hero h1 {
+  overflow: visible;
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 1.2;
@@ -352,6 +352,17 @@ header.scrolled {
   border-right: 3px solid #00f5ff; /* Cursor */
   width: 0;                    /* Start empty */
   animation: typing 4s steps(40, end) forwards, blink 0.8s step-end infinite;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    animation: none;        /* stop the typing */
+    width: auto;            /* use natural width */
+    overflow: visible;      /* don’t hide letters */
+    white-space: normal;    /* allow wrapping */
+    font-size: clamp(1.8rem, 6vw, 3rem);
+    border-right: none;   
+  }
 }
 
 @keyframes typing {
