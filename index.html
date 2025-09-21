@@ -142,18 +142,53 @@
         </div>
       </div>
     </section>
+    <!-- subtle divider between infographic and gallery -->
+    <hr class="section-divider" aria-hidden="true">
+
+  <!-- Gallery sits under the flowcharts and before the colored CTA -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <h2 class="section-title small">Snapshots</h2>
+      <p class="section-subtext">A few screenshots and visuals from Notivize.</p>
+      <div class="image-grid large">
+        <figure class="image-card animate-on-scroll">
+          <img src="assets/summary.png" alt="Email summary and key points" loading="lazy">
+          <figcaption>Smart Summaries</figcaption>
+        </figure>
+        <figure class="image-card animate-on-scroll">
+          <img src="assets/inbox.png" alt="Clean inbox interface" loading="lazy">
+          <figcaption>Clean Interface</figcaption>
+        </figure>
+        <figure class="image-card animate-on-scroll">
+          <img src="assets/calendar.png" alt="Calendar integration" loading="lazy">
+          <figcaption>Calendar Integration</figcaption>
+        </figure>
+        <figure class="image-card animate-on-scroll">
+          <img src="assets/chat.png" alt="AI chat interface" loading="lazy">
+          <figcaption>Smart Assistant</figcaption>
+        </figure>
+        <figure class="image-card animate-on-scroll">
+          <img src="assets/urgency.png" alt="Priority indicators" loading="lazy">
+          <figcaption>Priority Detection</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
 
     <section class="cta" id="cta">
       <div class="container">
         <h2>Stop managing email. Start getting results.</h2>
         <p>Join the waitlist and be the first to experience Notivize.</p>
+
         <form class="cta-form">
-          <input type="email" placeholder="your.email@example.com" required>
-          <button type="submit" class="cta-button">Request Early Access</button>
+            <input type="email" placeholder="your.email@example.com" required>
+            <button type="submit" class="cta-button">Request Early Access</button>
         </form>
       </div>
     </section>
   </main>
+
+  
 
   <footer>
     <div class="container">
@@ -167,5 +202,14 @@
 
    <script src="script.js"></script>
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <!-- Lightbox modal for gallery images -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <div class="lightbox__overlay" data-close></div>
+    <div class="lightbox__content">
+      <button class="lightbox__close" aria-label="Close preview" data-close>&times;</button>
+      <img src="" alt="" class="lightbox__img">
+      <p class="lightbox__caption"></p>
+    </div>
+  </div>
 </body>
 </html>
