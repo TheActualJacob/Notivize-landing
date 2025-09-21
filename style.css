@@ -363,18 +363,33 @@ header.scrolled {
 }
 
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  font-weight: 600;  
-  font-size: 1.25rem;   /* bigger */
-  line-height: 1.4;     /* better readability */
-  color: var(--text-light); /* softer contrast to not fight the h1 */
+.hero-subtext {
+  opacity: 0; /* hidden at start */
+  transform: translateY(10px); /* slight downward offset */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  max-width: 800px;
+  margin: 1rem auto 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
+
+.hero-subtext.visible {
+  opacity: 1; /* fade in */
+  transform: translateY(0); /* move into place */
+}
+
 .cta-button {
+  opacity: 0; /* hidden at start */
+  transform: translateY(10px); /* slight downward offset */
   display: inline-block;
+  margin-bottom: 1rem;
   text-decoration: none; 
-  padding: 1rem 2.5rem;
+  padding: 1rem 1rem;
   font-size: 1.2rem;
   font-weight: 600;
   color: white;
@@ -383,11 +398,18 @@ header.scrolled {
   border-radius: 50px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  transition: opacity 3s ease, transform 3s ease;
 
   /* Neon glow */
   box-shadow: 0 0 20px rgba(0, 245, 255, 0.6), 0 0 40px rgba(121, 40, 202, 0.6);
 
   animation: buttonPulse 3s ease-in-out infinite;
+}
+
+.cta-button.visible{
+  opacity: 1; /* fade in */
+  transform: translateY(0);
+  
 }
 
 .cta-button:hover {
@@ -403,27 +425,20 @@ header.scrolled {
   }
 }
 
-.hero-subtext {
-  opacity: 0;                /* hidden initially */
-  transform: translateY(10px);
-  transition: opacity 1s ease, transform 1s ease;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.4;
-  color: #ffffff;
-  text-shadow: 0 0 8px rgba(0, 245, 255, 0.25);
-}
 
-.hero-subtext.visible {
-  opacity: 1;
-  transform: translateY(0);  /* fade + slide in */
-}
+
 
 .support-text {
+  opacity: 0;
   display: block;
   margin-top: 0.75rem;
   font-size: 0.9rem;
   color: var(--text-dim);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.support-text.visible{
+  opacity: 1;
 }
 
 /* FEATURES */
@@ -517,15 +532,18 @@ header.scrolled {
   color: white;
 }
 .cta-form {
-  margin-top: 1.5rem;
+  margin-top: 3rem 0;
 }
 .cta-form input {
-  padding: 0.75rem 1rem;
+  padding: .75rem 1rem;
   border-radius: 999px;
   border: none;
   outline: none;
-  width: 250px;
-  margin-right: 0.5rem;
+  width: 200px;
+  margin-right: .5rem;
+  padding-left: auto;
+  padding-right: auto;
+  margin-top: 1.5rem;
 }
 .cta-form button {
   background: white;
@@ -551,6 +569,11 @@ footer {
 .social-links a {
   margin: 0 0.5rem;
   transition: transform 0.2s;
+}
+
+.cta-form{
+  margin: 0 auto;   /* needs a fixed width */
+  width: 200px;
 }
 .social-links a:hover {
   transform: scale(1.2);
