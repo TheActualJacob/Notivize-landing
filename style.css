@@ -131,6 +131,7 @@ header.scrolled {
 
 /* HERO */
 .hero {
+  overflow: visible;
   min-height: 100vh;
   display: flex;
   align-items: center;
