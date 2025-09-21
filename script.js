@@ -63,11 +63,11 @@ document.addEventListener("DOMContentLoaded", () => {
       
       setTimeout(() => {
         document.querySelector(".cta-button").classList.add("visible");
-      }, 2000); 
+      }, 1500); 
       
       setTimeout(() => {
         document.querySelector(".support-text").classList.add("visible");
-      }, 2000); 
+      }, 1500); 
    
     }
     
