@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   // --- HEADER SCROLL EFFECT ---
   const header = document.getElementById('header');
@@ -43,4 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
   infographicPaths.forEach((path, i) => {
     path.style.animationDelay = `${i * 0.5}s`;
   });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const typingElement = document.querySelector(".typing");
+  const text = typingElement.textContent;
+  typingElement.textContent = "";
+
+  let i = 0;
+  const speed = 50; // ms per character
+  function typeWriter() {
+    if (i < text.length) {
+      typingElement.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    } else {
+      document.querySelector(".hero-subtext").classList.add("visible");
+      
+      setTimeout(() => {
+        document.querySelector(".cta-button").classList.add("visible");
+      }, 2000); 
+      
+      setTimeout(() => {
+        document.querySelector(".support-text").classList.add("visible");
+      }, 2000); 
+   
+    }
+    
+  }
+  typeWriter();
 });
