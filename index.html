@@ -180,10 +180,19 @@
         <h2>Stop managing email. Start getting results.</h2>
         <p>Join the waitlist and be the first to experience Notivize.</p>
 
-        <form class="cta-form">
-            <input type="email" placeholder="your.email@example.com" required>
-            <button type="submit" class="cta-button">Request Early Access</button>
+        <form class="cta-form" action="https://formsubmit.co/ask.notivize@gmail.com" method="POST">
+            <input type="email" name="email" placeholder="youremail@example.com" required>
+            <input type="hidden" name="_subject" value="New Notivize Waitlist Signup!">
+            <input type="hidden" name="_next" value="https://theactualjacob.github.io/Notivize-landing/thanks.html">
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="submit-button">Join Waitlist</button>
         </form>
+        <div id="form-success" class="form-message success" style="display: none;">
+            Thank you for joining! We'll be in touch soon.
+        </div>
+        <div id="form-error" class="form-message error" style="display: none;">
+            Oops! Something went wrong. Please try again.
+        </div>
       </div>
     </section>
   </main>
