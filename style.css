@@ -473,16 +473,56 @@ header.scrolled {
   padding: 2rem;
   border-radius: 1rem;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(0, 245, 255, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
 }
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
 .feature-icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #38bdf8;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.5));
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(0, 245, 255, 0.8)) 
+         drop-shadow(0 0 30px rgba(121, 40, 202, 0.6));
+}
+
+.feature-icon box-icon {
+  width: 2.5em !important;
+  height: 2.5em !important;
+}
+
+.feature-card h3 {
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 /* INFOGRAPHIC */
